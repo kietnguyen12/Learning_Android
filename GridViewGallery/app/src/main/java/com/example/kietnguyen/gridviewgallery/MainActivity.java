@@ -29,7 +29,5 @@ public class MainActivity extends AppCompatActivity {
         hinhanhadapter = new HinhAnhAdapter(this, R.layout.dong_hinh_anh, listHinhAnh);
 
         gvhinh.setAdapter(hinhanhadapter);
-
-
     }
 }

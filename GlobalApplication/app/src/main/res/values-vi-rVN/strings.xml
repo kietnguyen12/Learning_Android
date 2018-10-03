@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GlobalApplication</string>
+    <string name="text_tieude">Phieu thong tin</string>
+    <string name="hint_name">Ho ten</string>
+    <string name="hint_phone">So dien thoai</string>
+    <string name="txt_btnClick">"Nhan "</string>
+</resources>

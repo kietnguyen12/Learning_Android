@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.io.Serializable;
+
 public class MainActivity extends AppCompatActivity {
     Button btnMain;
 
@@ -20,7 +22,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                Bundle bundle = new Bundle();
+                //integer
+                bundle.putInt("number", 69);
+                //string
+                bundle.putString("string", "This is my string");
+                //array
+                String[] city = {"HCM", "HN", "Nha Trang"};
+                bundle.putStringArray("array_city", city);
+                //object
+                HocSinh hs = new HocSinh("Nguyen Tuan Kiet", 1999);
+                bundle.putSerializable("object", hs);
+
+                intent.putExtra("dulieu", bundle);
+
                 startActivity(intent);
+
             }
         });
     }

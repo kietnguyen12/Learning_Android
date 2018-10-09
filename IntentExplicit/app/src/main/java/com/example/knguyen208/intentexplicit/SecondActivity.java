@@ -5,9 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class SecondActivity extends AppCompatActivity {
     Button btnSecond;
+    TextView txtSecond;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,6 +17,17 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
 
         btnSecond = findViewById(R.id.btnSecond);
+        txtSecond = findViewById(R.id.txtSecond);
+        Intent intent = getIntent();
+        Bundle bundle = intent.getBundleExtra("dulieu");
+        txtSecond.append(bundle.getString("string") + "\n");
+        txtSecond.append(bundle.getInt("number") + "\n");
+        String[] array_city = bundle.getStringArray("array_city");
+        txtSecond.append(array_city[2] + "\n");
+        HocSinh hocsinh = (HocSinh) bundle.getSerializable("object");
+        txtSecond.append(hocsinh.getHoten());
+
+
         btnSecond.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

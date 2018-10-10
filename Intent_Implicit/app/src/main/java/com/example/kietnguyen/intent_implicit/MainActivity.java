@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnCall = findViewById(R.id.btnCall);
         btnCall.setOnClickListener(new View.OnClickListener() {
-            @Override
+            @Override 
             public void onClick(View v) {
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_DIAL);

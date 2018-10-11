@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if(requestCode == REQUEST_CODE && resultCode == RESULT_OK && data != null){
-            Bitmap bitmap = (Bitmap) data.getExtras().get("data"); // key = data la mac dinh
+            Bitmap bitmap = (Bitmap) data.getExtras().get("data"); // key = date
             imgviewHinh.setImageBitmap(bitmap);
         }
         super.onActivityResult(requestCode, resultCode, data);

@@ -4,13 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondActivity">
-
-    <TableLayout
-        android:id="@+id/tablelayout"
+    tools:context=".SecondActivity"
+    android:background="#2287b726">
+    <!--Enable can scroll down/up -->
+    <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-    </TableLayout>
+        <TableLayout
+            android:id="@+id/tablelayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#2287b726">
+
+        </TableLayout>
+    </ScrollView>
+
+
 
 </android.support.constraint.ConstraintLayout>

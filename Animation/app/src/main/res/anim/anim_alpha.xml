@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillAfter="true">
+
+    <!--android:fillAfter="true" : luu lai trang thai cuoi cung cua animation-->
+    <!--android:fromAlpha="1"   : 1 => ko co mo-->
+    <!--android:toAlpha="0.1"   : 0 => ko thay gi-->
+    <!--android:repeatCount="2" : so lan lap lai-->
+    <!--android:repeatMode="reverse"    : kieu animation-->
+    <!--android:duration="2000"         : thoi gian bien doi-->
+
+    <alpha android:fromAlpha="1"
+        android:toAlpha="0.1"
+        android:repeatCount="2"
+        android:repeatMode="reverse"
+        android:duration="2000"></alpha>
+</set>

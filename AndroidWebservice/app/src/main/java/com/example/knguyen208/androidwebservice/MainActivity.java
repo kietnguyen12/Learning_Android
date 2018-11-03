@@ -35,16 +35,22 @@ public class MainActivity extends AppCompatActivity {
 
         listViewSV = findViewById(R.id.listviewSinhVien);
         sinhVienArrayList = new ArrayList<>();
-        GetDataSV();
+        Log.d("AAAA", "Kiet0");
+        //test
+//        sinhVienArrayList.add(new SinhVien(1, "Nguyen Tuan Kiet", 1997, "Bac Lieu"));
+
+        Log.d("AAAA", "Kiet1");
         sinhVienAdapter = new SinhVienAdapter(this, R.layout.dong_sinh_vien, sinhVienArrayList );
         listViewSV.setAdapter(sinhVienAdapter);
+
+        GetDataSV();
 
 
     }
 
     private void GetDataSV() {
         final RequestQueue requestQueue = Volley.newRequestQueue(this);
-        String url = "http://20.203.135.161:1122/androidwebservice/getdata.php";
+        String url = "http://192.168.0.104/androidwebservice/getdata.php";
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONArray>() {
                     @Override
@@ -58,6 +64,8 @@ public class MainActivity extends AppCompatActivity {
                                 Log.d("AAA", sinhvien.getInt("Id") + " " + sinhvien.getString("HoTen") + " " + sinhvien.getInt("NamSinh") + " " + sinhvien.getString("DiaChi"));
                             }
                             Log.d("AAAA", String.valueOf(sinhVienArrayList.size()));
+                            // Very important !!!!! Must notifydatasetchanged every time dataset changed
+                            sinhVienAdapter.notifyDataSetChanged();
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }

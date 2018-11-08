@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:weightSum="10"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/fragmentListSV"
+        android:name="com.example.knguyen208.fragmentchangeorientation.FragmentStudentList"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4" />
+
+    <fragment
+        android:id="@+id/fragmentSVInfo"
+        android:name="com.example.knguyen208.fragmentchangeorientation.FragmentStudentInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="6" />
+
+</LinearLayout>
